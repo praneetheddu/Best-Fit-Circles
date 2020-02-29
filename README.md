@@ -1,11 +1,18 @@
 ## Open CV Best Fit Circles
 
 # Radius Drag Method:
-Initially, the grid points are overlaid on the background which are 40 units apart but can be customizable by changing the grid size. When the program runs, an empty grid is displayed as followed.
+Initially, the grid points are overlaid on the background which are 40 units apart but can be customizable by changing the grid size. When the program runs, an empty grid is displayed as followed. 
 
-#### INSERT IMAGE HERE
+<p align="center"> 
+<img src="Readme_images/empty_grid.png">
+</p>
+
 User can click anywhere on the grid and drag the mouse to anywhere else on the grid. Once the mouse click is released, there are three circles displayed.
- #### INSERT IMAGE HERE
+
+<p align="center"> 
+<img src="Readme_images/radius_click_image.png">
+</p>
+
 The description of each circle and the highlighted points are as follows:
 1.	Blue circle: The blue circle indicates the user generated circle where the user clicks to place the center and drags to set the radius. Once the mouse click is released, that will be the final radius length.
 
@@ -20,7 +27,10 @@ The description of each circle and the highlighted points are as follows:
 
 2.	Inside the function, the top left and the bottom right points that are closest to the exterior of the circle are calculated and points between this area are computed for best fit. These points are indicated in orange below and the black square determines the bounds to select the potential best fit points. 
  
- ## InSERT IMAGE HERE
+<p align="center"> 
+<img src="Readme_images/threshold_box_image.png">
+</p>
+
  
 3.	Euclidean distances are measured for each point to the center of the circle and if the distance is within a certain threshold of radius, that point is a best fit point. Each distance value is stored in a vector.
 
@@ -30,7 +40,15 @@ The description of each circle and the highlighted points are as follows:
 
 ## Toggle Points Method:
 Like previous part, the program starts of by displaying an empty grid. In this scenario, the user can toggle points on the grid which will be marked blue after selection and click generate to plot a best fit circle. There should be atleast three points selected for the algorithm to start generating best circle. The best fit circle is approximated by using Polak and Ribière method where a circle center coordinates, and radius length are estimated using point triplets and are minimized iteratively until a best fit is found (MAISONOBE 3).
- #### INSERT IMAGE HERE              
+
+<p align="center"> 
+<img src="Readme_images/toggle_point_image.png">
+</p>       
+
+<p align="center"> 
+<img src="Readme_images/best-fit-circle.png">
+</p>      
+
 As shown in the image above, the user can select 3 or more points and click generate to form a best fit circle. 
 
 ### File Structure:
