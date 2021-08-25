@@ -34,7 +34,7 @@ The description of each circle and the highlighted points are as follows:
  
 3.	Euclidean distances are measured for each point to the center of the circle and if the distance is within a certain threshold of radius, that point is a best fit point. Each distance value is stored in a vector.
 
-4.	Once the best fit points are computer, draw_threshold_circles function iteratively decreases the radius of inner circle and increases the radius of outer circle and checks to see the distances are still within threshold for all them.
+4.	Once the best fit points are computed, draw_threshold_circles function iteratively decreases the radius of inner circle and increases the radius of outer circle and checks to see the distances are still within threshold for all them.
 
 5.	This occurs until at least one best fit point is not valid for both circles and the new threshold circles are drawn on the grid. 
 
